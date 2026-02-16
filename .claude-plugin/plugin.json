@@ -1,0 +1,8 @@
+{
+  "name": "forge-microsoft",
+  "version": "0.1.0",
+  "description": "Microsoft 365 integration — Outlook email, Teams, SharePoint, OneDrive, Planner via m365 CLI.",
+  "author": { "name": "Martin Zeman" },
+  "hooks": "./hooks/hooks.json",
+  "skills": ["./skills"]
+}
