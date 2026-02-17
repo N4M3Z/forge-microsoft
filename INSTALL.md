@@ -28,6 +28,8 @@ modules:
 | Node.js | Yes | `brew install node` |
 | CLI Microsoft 365 | Yes | `npm install -g @pnp/cli-microsoft365` |
 | Azure Entra app | Yes | App registration with delegated permissions |
+| [safety-net](https://github.com/kenryu42/claude-code-safety-net) | Recommended | Blocks destructive commands — see [root INSTALL.md](../../INSTALL.md#recommended-security-tools) |
+| shellcheck | Recommended | `brew install shellcheck` — shell script linting |
 
 ### Authentication
 
