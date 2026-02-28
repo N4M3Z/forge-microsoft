@@ -1,0 +1,11 @@
+sources:
+    - https://pnp.github.io/cli-microsoft365/
+
+claude:
+    argument-hint: "[target/file.md]"
+    allowed-tools: run_shell_command, read_file, write_file
+    context: fork
+    agent: EdgeResearcher
+
+user:
+    platform: win32

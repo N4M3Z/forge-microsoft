@@ -1,0 +1,14 @@
+# forge-microsoft default configuration.
+# Override: create config.yaml (gitignored) with only the fields you want to change.
+
+skills:
+    claude:
+        EdgeBrowser:
+    gemini:
+        EdgeBrowser:
+    codex:
+        EdgeBrowser:
+    opencode:
+        EdgeBrowser:
+
+hooks: {}
