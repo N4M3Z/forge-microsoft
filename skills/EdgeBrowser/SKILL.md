@@ -1,5 +1,6 @@
 ---
 name: EdgeBrowser
+version: 0.1.0
 description: Microsoft Edge tab capture — snapshot open tabs to a dated markdown archive (Windows). USE WHEN edge tabs, capture tabs, snapshot tabs, save tabs, browser tabs, list tabs.
 user_invocable: true
 ---
@@ -8,7 +9,7 @@ user_invocable: true
 
 Microsoft Edge tab capture for Windows. Exports all open tabs (titles and active-tab URLs) via PowerShell and UI Automation.
 
-## Operations
+## Usage
 
 | Operation | File | Description |
 |-----------|------|-------------|

@@ -10,7 +10,7 @@ help:
 	@echo "  make verify   Check skills deployed across all providers"
 	@echo "  make clean    Remove previously installed skills"
 	@echo "  make test     Run shell tests"
-	@echo "  make lint     Shellcheck all scripts"
+	@echo "  make lint     Schema + shell linting"
 	@echo "  make check    Verify module structure"
 
 init:
@@ -35,9 +35,15 @@ ifneq ($(wildcard $(LIB_DIR)/mk/shell.mk),)
   include $(LIB_DIR)/mk/shell.mk
 endif
 
+ifneq ($(wildcard $(LIB_DIR)/mk/lint.mk),)
+  include $(LIB_DIR)/mk/lint.mk
+endif
+
 install: install-skills
 	@echo "Installation complete. Restart your session or reload skills."
 
 clean: clean-skills
 
 verify: verify-skills
+
+lint: lint-schema lint-shell lint-docs lint-rules
