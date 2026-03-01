@@ -1,4 +1,4 @@
-# edge-tabs.ps1 — capture all open Microsoft Edge tabs via UI Automation.
+﻿# edge-tabs.ps1 — capture all open Microsoft Edge tabs via UI Automation.
 # Outputs markdown to stdout. Exit 1 if Edge is not running.
 # Windows only — requires .NET UI Automation (System.Windows.Automation).
 
@@ -58,7 +58,7 @@ foreach ($win in $wins) {
             $url = $bar.GetCurrentPattern(
                 [System.Windows.Automation.ValuePattern]::Pattern
             ).Current.Value
-        } catch {}
+        } catch { $url = '' }
     }
 
     # All tabs in this window
@@ -82,7 +82,7 @@ foreach ($win in $wins) {
                         [System.Windows.Automation.SelectionItemPattern]::Pattern
                     )
                     $selected = $pattern.Current.IsSelected
-                } catch {}
+                } catch { $selected = $false }
 
                 if ($selected -and $url -match '^https?://') {
                     Write-Output ('- [{0}]({1})' -f $name, $url)
