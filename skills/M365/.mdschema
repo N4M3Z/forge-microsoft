@@ -1,0 +1,15 @@
+# Subskill schema — service operation reference files
+# Pattern: H1 service name, H2 per operation, no H3 depth
+
+frontmatter:
+    optional: true
+
+heading_rules:
+    no_skip_levels: true
+    max_depth: 2
+
+structure:
+    - heading:
+        pattern: '# .*'
+        regex: true
+      allow_additional: true

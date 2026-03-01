@@ -1,4 +1,4 @@
 sources: []
 
 claude:
-    argument-hint: "[outlook|outlook list|outlook read <id>|outlook compose]"
+    argument-hint: "[outlook|todo|calendar|teams] [operation] [args]"

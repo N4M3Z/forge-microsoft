@@ -5,9 +5,9 @@ events: []
 
 provides:
   email: true
-  calendar: false
-  tasks: false
-  chat: false
+  calendar: true
+  tasks: true
+  chat: true
   files: false
 
 tools:
