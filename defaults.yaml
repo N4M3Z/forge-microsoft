@@ -4,12 +4,21 @@
 skills:
     claude:
         EdgeBrowser:
+        ExplainPowerShell:
     gemini:
         EdgeBrowser:
+        ExplainPowerShell:
     codex:
         EdgeBrowser:
+        ExplainPowerShell:
     opencode:
         EdgeBrowser:
+        ExplainPowerShell:
+
+agents:
+    MicrosoftAdvisor:
+        model: fast
+        tools: Read, Grep, Glob, Bash
 
 providers:
     claude:

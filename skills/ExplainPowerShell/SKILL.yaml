@@ -1,0 +1,6 @@
+sources:
+    - https://learn.microsoft.com/en-us/powershell/
+
+gemini:
+    argument-hint: "[PS skript nebo cesta k souboru]"
+    user-invocable: true
