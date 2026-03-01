@@ -1,0 +1,7 @@
+sources: []
+
+claude:
+    allowed-tools: Bash
+
+user:
+    platform: win32
