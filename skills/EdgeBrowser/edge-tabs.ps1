@@ -1,10 +1,18 @@
 # edge-tabs.ps1 — capture all open Microsoft Edge tabs via UI Automation.
 # Outputs markdown to stdout. Exit 1 if Edge is not running.
+# Windows only — requires .NET UI Automation (System.Windows.Automation).
 
 param(
     [switch]$Count,
     [switch]$Export
 )
+
+if (-not $IsWindows) {
+    [Console]::Error.WriteLine('edge-tabs.ps1 requires Windows (.NET UI Automation is not available on this platform).')
+    exit 1
+}
+
+$ErrorActionPreference = 'Stop'
 
 if (-not $Count -and -not $Export) {
     $Export = $true
