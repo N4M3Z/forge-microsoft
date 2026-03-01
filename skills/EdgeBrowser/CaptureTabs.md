@@ -6,7 +6,7 @@ Snapshot all open Microsoft Edge tabs — titles and active-tab URLs — into a 
 
 1. Run the capture script:
    ```powershell
-   powershell.exe -ExecutionPolicy Bypass -File "${FORGE_MODULE_ROOT:-Modules/forge-microsoft}/bin/edge-tabs.ps1" -Export
+   powershell.exe -ExecutionPolicy Bypass -File "${FORGE_MODULE_ROOT:-Modules/forge-microsoft}/skills/EdgeBrowser/edge-tabs.ps1" -Export
    ```
 
 2. Save the output to the archive directory:
@@ -16,7 +16,7 @@ Snapshot all open Microsoft Edge tabs — titles and active-tab URLs — into a 
 
 3. Run `-Count` mode and show the user a summary:
    ```powershell
-   powershell.exe -ExecutionPolicy Bypass -File "${FORGE_MODULE_ROOT:-Modules/forge-microsoft}/bin/edge-tabs.ps1" -Count
+   powershell.exe -ExecutionPolicy Bypass -File "${FORGE_MODULE_ROOT:-Modules/forge-microsoft}/skills/EdgeBrowser/edge-tabs.ps1" -Count
    ```
 
 4. Report what was captured and where it was saved.

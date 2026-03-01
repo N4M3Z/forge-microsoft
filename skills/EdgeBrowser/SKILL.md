@@ -16,7 +16,7 @@ Microsoft Edge tab capture for Windows. Exports all open tabs (titles and active
 
 ## Tools
 
-- `bin/edge-tabs.ps1` — tab export script (UI Automation, outputs markdown to stdout)
+- `edge-tabs.ps1` — tab export script (UI Automation, outputs markdown to stdout)
 
 ## Constraints
 
