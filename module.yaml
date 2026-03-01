@@ -4,7 +4,7 @@ description: Microsoft 365 integration — Outlook email, Teams, SharePoint, One
 events: []
 
 provides:
-  email: false
+  email: true
   calendar: false
   tasks: false
   chat: false

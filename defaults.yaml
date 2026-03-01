@@ -4,12 +4,16 @@
 skills:
     claude:
         EdgeBrowser:
+        M365:
     gemini:
         EdgeBrowser:
+        M365:
     codex:
         EdgeBrowser:
+        M365:
     opencode:
         EdgeBrowser:
+        M365:
 
 providers:
     claude:

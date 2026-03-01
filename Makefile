@@ -1,14 +1,17 @@
-# forge-microsoft — test and lint
+# forge-microsoft — skills, test, and lint
 
 LIB_DIR = $(or $(FORGE_LIB),lib)
 
-.PHONY: help test lint check init
+.PHONY: help install clean verify test lint check init
 
 help:
 	@echo "forge-microsoft targets:"
-	@echo "  make test    Run shell tests"
-	@echo "  make lint    Shellcheck all scripts"
-	@echo "  make check   Verify module structure"
+	@echo "  make install  Deploy skills (Claude, Gemini, Codex, OpenCode)"
+	@echo "  make verify   Check skills deployed across all providers"
+	@echo "  make clean    Remove previously installed skills"
+	@echo "  make test     Run shell tests"
+	@echo "  make lint     Shellcheck all scripts"
+	@echo "  make check    Verify module structure"
 
 init:
 	@if [ ! -d $(LIB_DIR)/mk ]; then \
@@ -16,6 +19,25 @@ init:
 	  git submodule update --init $(LIB_DIR); \
 	fi
 
+ifneq ($(wildcard $(LIB_DIR)/mk/common.mk),)
+  include $(LIB_DIR)/mk/common.mk
+endif
+
+ifneq ($(wildcard $(LIB_DIR)/mk/skills/install.mk),)
+  include $(LIB_DIR)/mk/skills/install.mk
+endif
+
+ifneq ($(wildcard $(LIB_DIR)/mk/skills/verify.mk),)
+  include $(LIB_DIR)/mk/skills/verify.mk
+endif
+
 ifneq ($(wildcard $(LIB_DIR)/mk/shell.mk),)
   include $(LIB_DIR)/mk/shell.mk
 endif
+
+install: install-skills
+	@echo "Installation complete. Restart your session or reload skills."
+
+clean: clean-skills
+
+verify: verify-skills

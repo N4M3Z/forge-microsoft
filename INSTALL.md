@@ -11,15 +11,15 @@ modules:
   - forge-microsoft    # Platform — M365 email, Teams, SharePoint via m365 CLI
 ```
 
-## Planned capabilities
+## Capabilities
 
-| Service | Status |
-|---------|--------|
-| Outlook (email) | Scaffolded |
-| Teams (chat) | Not implemented |
-| SharePoint (files) | Not implemented |
-| OneDrive (storage) | Not implemented |
-| Planner (tasks) | Not implemented |
+| Service | Status | Skill |
+|---------|--------|-------|
+| Outlook (email) | Active | `/M365 outlook` |
+| Teams (chat) | Planned | — |
+| SharePoint (files) | Planned | — |
+| OneDrive (storage) | Planned | — |
+| Planner (tasks) | Planned | — |
 
 ## Dependencies
 
