@@ -7,7 +7,7 @@ param(
     [switch]$Export
 )
 
-if (-not $IsWindows) {
+if ($env:OS -notlike "*Windows*") {
     [Console]::Error.WriteLine('edge-tabs.ps1 requires Windows (.NET UI Automation is not available on this platform).')
     exit 1
 }
